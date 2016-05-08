@@ -36,18 +36,10 @@
 - (IBAction)onChangeVoice:(id)sender forEvent:(UIEvent *)event {
     NSLog(@"onChangeVoice pressed");
     AppDelegate *del = [[UIApplication sharedApplication] delegate];
-    bool wasSpeaking = false;
-    if(del.synthesizer.speaking) {
-        wasSpeaking = true;
-        [del.synthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate];
-    }
     del.currentVoice = self.stepper.value;
     del.utterance.voice = del.voices[del.currentVoice];
     AVSpeechSynthesisVoice* voice = ((AVSpeechSynthesisVoice*)del.voices[del.currentVoice]);
     self.currentVoice.text = voice.name;
-    if(wasSpeaking) {
-        [del.synthesizer continueSpeaking];
-    }
 }
 
 - (IBAction)onPlayVoice:(id)sender {
