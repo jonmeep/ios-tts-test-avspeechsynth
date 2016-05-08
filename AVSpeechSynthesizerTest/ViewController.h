@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *currentVoice;
 @property (weak, nonatomic) IBOutlet UITextView *currentText;
+@property (weak, nonatomic) IBOutlet UIStepper *stepper;
+
 
 @end
 

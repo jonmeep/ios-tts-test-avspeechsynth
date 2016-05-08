@@ -93,6 +93,7 @@
                     <connections>
                         <outlet property="currentText" destination="dgS-HJ-srC" id="mzL-U8-fZY"/>
                         <outlet property="currentVoice" destination="gpg-VS-YYi" id="pkk-6K-JqM"/>
+                        <outlet property="stepper" destination="EtC-b2-ebE" id="y5A-Wz-GOC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

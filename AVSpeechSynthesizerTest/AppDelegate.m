@@ -17,7 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.synthesizer = [[AVSpeechSynthesizer alloc] init];
     self.voices = [AVSpeechSynthesisVoice speechVoices];
+    self.currentVoice = 0;
     return YES;
 }
 
